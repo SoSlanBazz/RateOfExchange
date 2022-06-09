@@ -1,3 +1,7 @@
+Сервис, который обращается к сервису курсов валют, и отдает gif в ответ:
+если курс по отношению к рублю за сегодня стал выше вчерашнего, то отдаем рандомную отсюда https://giphy.com/search/rich 
+если ниже - отсюда https://giphy.com/search/broke
+
 С Docker:
 docker build . -t RateOfExchange
 docker run -p 8080:8080 -t RateOfExchange
