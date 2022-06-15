@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 
-@FeignClient(name = "Feign", url = "https://openexchangerates.org/api")
-public interface Client {
+@FeignClient(name = "Feign",  url = "${urlExchangeClient}")
+public interface ExchangeClient {
+
     @GetMapping("/historical/{date}.json")
      Result exchange(@PathVariable ("date") String day, @RequestParam("app_id") String app_id,
                      @RequestParam("base") String base, @RequestParam("symbols") String symbols);
