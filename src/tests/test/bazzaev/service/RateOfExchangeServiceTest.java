@@ -100,8 +100,8 @@ class RateOfExchangeServiceTest {
         jsonYesterday.setData(array2);
         Result resultToday = new Result();
         Result resultYesterday = new Result();
-        hash.put("1", 0.0);
-        hash2.put("2", 1.0);
+        hash.put("EUR", 0.0);
+        hash2.put("EUR", 1.0);
         resultToday.setRates(hash);
         resultYesterday.setRates(hash2);
         given(client.exchange(yesterday, app_id, base, symbols)).willReturn(resultYesterday);
